@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>webpack starterkit</title>
+  <title>Zonifero-Website</title>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/index.scss">
+  <script src="https://kit.fontawesome.com/1c5b970057.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>webpack starter</h1>
-  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
+  <header class="header">
+    <article class="navigation-primary">
+      <picture class="navigation-primary__logo">
+        <img src="/src/images/small_logo.png" alt="Logo">
+      </picture>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Zonifero products</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Store</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Blog</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link"><img src="/src/images/globe.png" alt="Language" class="nav__list-arrow"><i class="fas fa-chevron-down"></i></a>
+          </li>
+          <div class="buttons">
+            <button class="buttons__button buttons__button--sign-in">Sign in</button>
+            <button class="buttons__button buttons__button--download">Get the app</button>
+          </div>
+        </ul>
+      </nav>
+      <button class="navigation-primary__hamburger">
+        <i class="fas fa-bars navigation-primary__hamburger--btn"></i>
+      </button>
+    </article>
+    <article class="navigation-secondary">
+      <p class="navigation-secondary__title">zonifero WorkPlace
+        <button class="navigation-secondary__button">
+          <i class="fas fa-chevron-down navigation-secondary__arrow"></i>
+        </button>
+      </p>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item nav__list-item--active">
+            <a href="#" class="nav__list-link">Overview</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Features</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Specs</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">FAQ</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </article>
+  </header>
 </body>
+
 </html>

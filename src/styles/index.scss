@@ -1,5 +1,4 @@
-$body-color: blue;
-
-body {
-  color: $body-color;
-}
+@import "_variables.scss";
+@import "_reset.scss";
+@import "modules/_navigation.scss";
+@import "modules/_header.scss";

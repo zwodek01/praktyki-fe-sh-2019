@@ -1,0 +1,29 @@
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+.nav {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0;
+    font-family: 'Roboto', sans-serif;
+
+    &__secondNav {
+        font-size: $fs-xsmall;
+    }
+
+    .fa-chevron-up {
+        padding: 0 10px 0 0;
+        transform: rotate(180deg);
+    }
+
+    &__list {
+        display: none;
+    }
+
+    .fa-bars {
+        color: $product-color;
+    }
+}

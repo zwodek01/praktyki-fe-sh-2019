@@ -1,0 +1,77 @@
+.header {
+    background-color: #F7F7F7;
+
+    .hero-content {
+        height: 500px;
+        position: relative;
+        background: url("/src/images/desks.png");
+        background-position: 0 330px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        overflow: hidden;
+
+
+        &__title {
+            color: $product-color;
+            font-family: Poppins;
+            font-size: $lh-regular;
+            font-weight: bold;
+            padding: 80px 0 0 20px;
+            text-align: left;
+        }
+
+        &__img-phone {
+            width: 270px;
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+
+    .description {
+
+        &__text {
+            font-family: Roboto;
+            font-size: $fs-small;
+            line-height: $lh-small + 7;
+            padding: 60px 20px 0;
+            text-align: left;
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+        }
+    }
+
+    .slider {
+        &__management {
+            padding: 0 20px;
+        }
+
+        &__title {
+            font-family: Poppins;
+            font-size: $fs-regular;
+            font-weight: bold;
+            line-height: $lh-regular;
+        }
+
+        &__text {
+            font-family: Roboto;
+            font-size: $fs-xsmall;
+            font-weight: 300;
+            line-height: $lh-small + 2;
+            padding-top: 40px;
+        }
+    }
+
+    &__text {
+        font-family: Roboto;
+        font-size: $fs-xsmall;
+        padding: 80px 0 0 20px;
+    }
+
+}

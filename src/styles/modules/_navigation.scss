@@ -1,92 +1,182 @@
+// .navigation {
+//     width: 100%;
+//     position: fixed;
+//     font-family: Roboto;
+//     background-color: #fff;
+
+
+//     &__container {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         margin: 0 20px;
+//     }
+
+//     &__logo::after {
+//         content: "zonifero"
+//     }
+
+//     .nav {
+
+//         &__list {
+//             display: flex;
+//             align-items: center;
+//         }
+
+//         &__list-item {
+//             padding: 0 20px;
+//             font-size: $fs-xsmall - 4;
+//         }
+
+//         &__list-link {
+//             text-decoration: none;
+//             color: #000;
+//         }
+
+//         &__list-arrow {
+//             padding-right: 5px;
+//         }
+
+//         .buttons {
+//             padding-left: 65px;
+
+//             &__button {
+//                 font-family: Roboto;
+//                 border: none;
+//                 height: 80px;
+//                 outline: none;
+//                 font-size: $fs-xsmall;
+
+//                 &--sign-in {
+//                     background-color: transparent;
+//                     width: 80px;
+//                 }
+
+//                 &--sign-in:hover {
+//                     cursor: pointer;
+//                 }
+
+//                 &--download {
+//                     width: 280px;
+//                     background-color: $product-color;
+//                     color: #fff;
+//                 }
+
+//                 &--download:hover {
+//                     cursor: pointer;
+//                 }
+//             }
+//         }
+//     }
+
+//     &__hamburger {
+//         display: none;
+//     }
+// }
+
+// @media (max-width:1023px) {
+//     .navigation {
+
+//         &__container {
+//             height: 60px;
+//         }
+
+//         &__logo::after {
+//             content: ""
+//         }
+
+//         .nav {
+//             display: none;
+//         }
+
+//         &__hamburger {
+//             display: block;
+//             border: none;
+//             background-color: transparent;
+//             outline: none;
+//         }
+//     }
+// }
+
 .navigation {
-    width: 100%;
     position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 20px;
     font-family: Roboto;
     background-color: #fff;
+    z-index: 2;
 
-
-    &__container {
+    .primary {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 20px;
-    }
-
-    &__logo::after {
-        content: "zonifero"
-    }
-
-    .nav {
-
-        &__list {
-            display: flex;
-            align-items: center;
-        }
-
-        &__list-item {
-            padding: 0 20px;
-            font-size: $fs-xsmall - 4;
-        }
-
-        &__list-link {
-            text-decoration: none;
-            color: #000;
-        }
-
-        &__list-arrow {
-            padding-right: 5px;
-        }
-
-        .buttons {
-            padding-left: 65px;
-
-            &__button {
-                font-family: Roboto;
-                border: none;
-                height: 80px;
-                outline: none;
-                font-size: $fs-xsmall;
-
-                &--sign-in {
-                    background-color: transparent;
-                    width: 80px;
-                }
-
-                &--sign-in:hover {
-                    cursor: pointer;
-                }
-
-                &--download {
-                    width: 280px;
-                    background-color: $product-color;
-                    color: #fff;
-                }
-
-                &--download:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-
-    &__hamburger {
-        display: none;
-    }
-}
-
-@media (max-width:1023px) {
-    .navigation {
-
-        &__container {
-            height: 60px;
-        }
-
-        &__logo::after {
-            content: ""
-        }
+        width: 100%;
+        height: 80px;
 
         .nav {
             display: none;
+
+            @include media-desktop {
+                display: block;
+            }
+
+            &__list {
+                display: flex;
+                align-items: center;
+            }
+
+            &__list-item {
+                margin: 0 20px;
+            }
+
+            &__list-link {
+                text-decoration: none;
+                color: #000;
+                transition: .3s;
+
+                &:hover {
+                    color: $product-color;
+                }
+            }
+
+            &__list-arrow {
+                padding-right: 5px;
+            }
+
+            .buttons {
+                padding-left: 65px;
+
+                &__button {
+                    font-family: Roboto;
+                    border: none;
+                    height: 80px;
+                    outline: none;
+                    font-size: $fs-xsmall;
+
+                    &--sign-in {
+                        background-color: transparent;
+                        width: 80px;
+                    }
+
+                    &--sign-in:hover {
+                        cursor: pointer;
+                    }
+
+                    &--download {
+                        width: 280px;
+                        background-color: $product-color;
+                        color: #fff;
+                        transition: .3s;
+                    }
+
+                    &--download:hover {
+                        cursor: pointer;
+                        background-color: #2035ee;
+
+                    }
+                }
+            }
         }
 
         &__hamburger {
@@ -94,6 +184,64 @@
             border: none;
             background-color: transparent;
             outline: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @include media-desktop {
+                display: none;
+            }
+        }
+    }
+
+    .secondary {
+        @include media-desktop {
+            max-width: 1300px;
+            margin-left: 250px;
+        }
+
+        .nav {
+            display: none;
+
+            @include media-desktop {
+                display: block;
+                height: 80px;
+            }
+
+            &__list {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+
+            &__list-item {
+                margin-right: 40px;
+            }
+
+            &__list-item--active {
+                @include active;
+            }
+
+            &__list-link {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+
+        &__mobile-nav {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @include media-desktop {
+                display: none;
+            }
         }
     }
 }

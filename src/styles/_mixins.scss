@@ -1,24 +1,42 @@
 @mixin active {
     font-weight: bold;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 33px;
+        height: 3px;
+        background-color: $secondary-color;
+    }
 }
 
-@mixin active-after {
-    content: "";
-    display: block;
-    width: 33px;
-    height: 3px;
-    background-color: $secondary-color;
-}
-
-@mixin input-settings {
-    height: 30px;
-    margin: 30px 0;
-    padding: 30px 0;
-    font-size: 30px;
-    border: none;
-    background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
+@mixin border-input {
+    background-image: radial-gradient(rgb(0, 0, 0) 2px, rgb(255, 255, 255) 2px);
     background-position: bottom;
-    background-size: 3px 1px;
+    background-size: 7px 2px;
     background-repeat: repeat-x;
-    // border-bottom: 1px dotted #000;
+}
+
+//BREAKPOINTS
+
+$mobileBreakpoint: 500px;
+$desktopBreakpoint: 1024px;
+$largeDesktopBreakpoint: 1366px;
+
+@mixin media-mobile {
+    @media (min-width : $mobileBreakpoint) {
+        @content;
+    }
+}
+
+@mixin media-desktop {
+    @media (min-width : $desktopBreakpoint) {
+        @content;
+    }
+}
+
+@mixin media-large-desktop {
+    @media (min-width : $largeDesktopBreakpoint) {
+        @content;
+    }
 }

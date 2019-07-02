@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <section class="navigation">
+  <!-- <section class="navigation">
     <article class="navigation__container">
       <picture class="navigation__logo">
         <img src="/src/images/small_logo.png" alt="Logo">
@@ -96,7 +96,71 @@
         </picture>
       </section>
     </section>
-  </header>
+  </header> -->
+  <section class="navigation">
+    <article class="primary">
+      <picture class="primary__logo">
+        <img src="/src/images/small_logo.png" alt="Logo">
+      </picture>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Zonifero products</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Store</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Blog</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link"><img src="/src/images/globe.png" alt="Language"
+                    class="nav__list-arrow"><i class="fas fa-chevron-down"></i></a>
+          </li>
+          <div class="buttons">
+            <button class="buttons__button buttons__button--sign-in">Sign in</button>
+            <button class="buttons__button buttons__button--download">Get the app</button>
+          </div>
+        </ul>
+      </nav>
+      <button class="primary__hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+    </article>
+
+
+
+
+    <article class="secondary">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            zonifero WorkPlace:
+          </li>
+          <li class="nav__list-item nav__list-item--active">
+            <a href="#" class="nav__list-link">Overview</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Features</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Specs</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">FAQ</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__list-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="secondary__mobile-nav">
+        <p class="secondary__menu">
+          zonifero WorkPlace <i class="fas fa-chevron-down"></i>
+        </p>
+      </div>
+    </article>
+  </section>
   <!-- Dokończyć header -->
   <!-- OGarnać forma i przejrzec reszte ! ! !
 
@@ -108,15 +172,16 @@
         <a href="#" class="contact__link">Call us</a>
       </div>
       <form class="content">
-        <input type="text" class="content__first-name content__input">
-        <input type="text" class="content__family-name content__input">
-        <input type="text" class="content__email content__input">
-        <input type="text" class="content__phone content__input">
-        <input type="text" class="content__message">
+        <input type="text" class="content__input" placeholder="First name">
+        <input type="text" class="content__input" placeholder="Family name">
+        <input type="tel" class="content__input" placeholder="Your phone">
+        <input type="email" class="content__input" placeholder="Your email">
+        <textarea class="content__message" placeholder="Message"></textarea>
         <div class="center">
-          <input type="submit" class="center__submit">
+          <input type="submit" class="center__submit" value="Send Message">
         </div>
       </form>
+      <p class="form__text">Zonifero product family</p>
     </article>
   </section>
 

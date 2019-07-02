@@ -1,73 +1,123 @@
-// OGarnać forma i przejrzec reszte ! ! !
-
-// MEDIA @media ! ! !
-
 .form {
+
     &__container {
-        max-width: 1400px;
-        margin: 0 auto;
-        // background-color: cadetblue;
+        margin: 120px 0 25px 0;
+        padding: 0 20px;
+
+        @include media-desktop {
+            max-width: 1300px;
+            margin: 160px auto 25px auto;
+        }
 
         .contact {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
+            font-family: Roboto;
+            margin-bottom: 80px;
+
+            @include media-desktop {
+                justify-content: center;
+            }
 
             &__link {
-                margin: 0 20px;
-                font-family: Roboto;
-                font-size: 17px;
-                line-height: 30px;
-                text-decoration: none;
                 color: #000;
+                text-decoration: none;
+            }
+
+            &__link:nth-of-type(1) {
+                margin-right: 40px;
             }
 
             &__link--active {
                 @include active;
             }
-
-            &__link--active::after {
-                @include active-after;
-            }
         }
 
         .content {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
+            position: relative;
 
-            margin: 0 40px;
-
-            &__message {
-                width: 100%;
+            @include media-desktop {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
             }
 
             &__input {
-                width: 45%;
-                @include input-settings;
+                border: none;
+                height: 50px;
+                margin-bottom: 70px;
+                font-size: 30px;
+                @include border-input;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    font-size: 20px;
+                    color: #000;
+                }
+
+                @include media-desktop {
+                    width: 45%;
+                }
             }
 
-
             &__message {
-                @include input-settings;
-            }
+                resize: none;
+                height: 150px;
+                font-size: 30px;
+                border: none;
+                margin-bottom: 50px;
+                @include border-input;
 
-            &__input:focus,
-            &__message {
-                outline: none;
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    font-size: 20px;
+                    color: #000;
+                    font-family: Roboto;
+                }
+
+                @include media-desktop {
+                    width: 100%;
+                    height: 50px;
+                    margin-bottom: 70px;
+                }
             }
 
             .center {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                width: 100%;
+                margin: 0 auto 110px auto;
 
+                @include media-desktop {
+                    margin-bottom: 200px;
+                }
 
                 &__submit {
+                    height: 60px;
                     width: 200px;
+                    background-color: $product-color;
+                    border: none;
+                    font-family: Roboto;
+                    font-size: 17px;
+                    color: #fff;
+                    transition: .3s;
+
+                    &:hover {
+                        background-color: #2035ee;
+                        cursor: pointer;
+                    }
                 }
             }
         }
+    }
+
+    &__text {
+        font-family: Roboto;
+        font-size: 17px;
     }
 }

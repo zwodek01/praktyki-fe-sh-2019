@@ -1,103 +1,3 @@
-// .navigation {
-//     width: 100%;
-//     position: fixed;
-//     font-family: Roboto;
-//     background-color: #fff;
-
-
-//     &__container {
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         margin: 0 20px;
-//     }
-
-//     &__logo::after {
-//         content: "zonifero"
-//     }
-
-//     .nav {
-
-//         &__list {
-//             display: flex;
-//             align-items: center;
-//         }
-
-//         &__list-item {
-//             padding: 0 20px;
-//             font-size: $fs-xsmall - 4;
-//         }
-
-//         &__list-link {
-//             text-decoration: none;
-//             color: #000;
-//         }
-
-//         &__list-arrow {
-//             padding-right: 5px;
-//         }
-
-//         .buttons {
-//             padding-left: 65px;
-
-//             &__button {
-//                 font-family: Roboto;
-//                 border: none;
-//                 height: 80px;
-//                 outline: none;
-//                 font-size: $fs-xsmall;
-
-//                 &--sign-in {
-//                     background-color: transparent;
-//                     width: 80px;
-//                 }
-
-//                 &--sign-in:hover {
-//                     cursor: pointer;
-//                 }
-
-//                 &--download {
-//                     width: 280px;
-//                     background-color: $product-color;
-//                     color: #fff;
-//                 }
-
-//                 &--download:hover {
-//                     cursor: pointer;
-//                 }
-//             }
-//         }
-//     }
-
-//     &__hamburger {
-//         display: none;
-//     }
-// }
-
-// @media (max-width:1023px) {
-//     .navigation {
-
-//         &__container {
-//             height: 60px;
-//         }
-
-//         &__logo::after {
-//             content: ""
-//         }
-
-//         .nav {
-//             display: none;
-//         }
-
-//         &__hamburger {
-//             display: block;
-//             border: none;
-//             background-color: transparent;
-//             outline: none;
-//         }
-//     }
-// }
-
 .navigation {
     position: fixed;
     top: 0;
@@ -133,7 +33,7 @@
             &__list-link {
                 text-decoration: none;
                 color: #000;
-                transition: .3s;
+                transition: $transition-animation;
 
                 &:hover {
                     color: $product-color;
@@ -167,13 +67,12 @@
                         width: 280px;
                         background-color: $product-color;
                         color: #fff;
-                        transition: .3s;
+                        transition: $transition-animation;
                     }
 
                     &--download:hover {
                         cursor: pointer;
                         background-color: #2035ee;
-
                     }
                 }
             }
@@ -184,9 +83,11 @@
             border: none;
             background-color: transparent;
             outline: none;
+            transition: $transition-animation;
 
             &:hover {
                 cursor: pointer;
+                color: #2035ee;
             }
 
             @include media-desktop {
@@ -234,9 +135,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            font-size: $fs-xsmall;
+            transition: $transition-animation;
 
             &:hover {
                 cursor: pointer;
+                color: #2035ee;
             }
 
             @include media-desktop {

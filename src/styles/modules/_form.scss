@@ -105,7 +105,7 @@
                     font-family: Roboto;
                     font-size: 17px;
                     color: #fff;
-                    transition: .3s;
+                    transition: $transition-animation;
 
                     &:hover {
                         background-color: #2035ee;

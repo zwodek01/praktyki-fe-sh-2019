@@ -1,0 +1,199 @@
+// Dokończyć media  ! 
+
+.header {
+    background-color: $background-color;
+    padding: 80px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    &__navigation {
+
+        .nav {
+            font-family: Roboto;
+            height: 80px;
+            background-color: #fff;
+
+            &__list {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                height: 100%;
+
+            }
+
+            &__list-item {
+                padding: 0 40px;
+            }
+
+            &__list-item--active {
+                @include active;
+            }
+
+            &__list-item--active::after {
+                @include active-after;
+            }
+
+            &__list-link {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+
+    }
+
+    &__mobile-nav {
+        display: none;
+    }
+
+    &__container {
+        margin-top: 140px;
+
+        .content {
+            margin-left: 40px;
+            background: url("/src/images/first_section_bg.png");
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            &__title {
+                width: 570px;
+                color: #3046FF;
+                font-family: Poppins;
+                font-size: 70px;
+                font-weight: bold;
+                line-height: 80px;
+            }
+
+            &__image-one {
+                display: none;
+            }
+
+            &__text {
+                height: 104px;
+                width: 600px;
+                color: #000000;
+                font-family: Roboto;
+                font-size: 30px;
+                line-height: 40px;
+                margin: 50px 0;
+            }
+
+            &__buttons {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start
+            }
+
+            &__btn {
+                border: none;
+                background-color: none;
+                outline: none;
+            }
+
+            &__btn:hover {
+                cursor: pointer;
+            }
+
+            &__btn--android {
+                background: url("/src/images/en_badge_web_generic.png");
+                width: 200px;
+                height: 50px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-right: 20px;
+            }
+
+            &__btn--ios {
+                background: url("/src/images/ios-download.svg");
+                width: 200px;
+                height: 60px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+            &__image-two {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                height: 475px;
+                overflow: hidden;
+            }
+
+            &__phone {
+                width: 70%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .header {
+        position: relative;
+        background-color: transparent;
+
+        .nav {
+            &__list {
+                display: none;
+            }
+        }
+
+        &__mobile-nav {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            transform: translateX(-50%);
+            font-family: Roboto;
+        }
+
+        &__mobile-nav:hover {
+            cursor: pointer;
+        }
+
+        &__menu {
+            font-size: 15px;
+        }
+
+        &__container {
+            margin-top: 0;
+
+            .content {
+                background: none;
+
+
+                &__title {
+                    height: 93px;
+                    width: 299px;
+                    color: #3046FF;
+                    font-family: Poppins;
+                    font-size: 40px;
+                    font-weight: bold;
+                    line-height: 50px;
+                }
+
+                &__image-one {
+                    display: block;
+                    margin: 70px auto;
+                    overflow: hidden;
+                    background: url("/src/images/desks.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+                &__image-two {
+                    display: none;
+                    margin: 0 auto;
+                }
+
+                &__phone {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

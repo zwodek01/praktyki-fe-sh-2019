@@ -1,0 +1,73 @@
+// OGarnać forma i przejrzec reszte ! ! !
+
+// MEDIA @media ! ! !
+
+.form {
+    &__container {
+        max-width: 1400px;
+        margin: 0 auto;
+        // background-color: cadetblue;
+
+        .contact {
+            display: flex;
+            justify-content: center;
+
+            &__link {
+                margin: 0 20px;
+                font-family: Roboto;
+                font-size: 17px;
+                line-height: 30px;
+                text-decoration: none;
+                color: #000;
+            }
+
+            &__link--active {
+                @include active;
+            }
+
+            &__link--active::after {
+                @include active-after;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            margin: 0 40px;
+
+            &__message {
+                width: 100%;
+            }
+
+            &__input {
+                width: 45%;
+                @include input-settings;
+            }
+
+
+            &__message {
+                @include input-settings;
+            }
+
+            &__input:focus,
+            &__message {
+                outline: none;
+            }
+
+            .center {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+
+
+                &__submit {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}

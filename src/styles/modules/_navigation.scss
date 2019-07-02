@@ -1,203 +1,99 @@
-.header {
-    padding: 0 20px;
-    position: relative;
+.navigation {
+    width: 100%;
+    position: fixed;
+    font-family: Roboto;
+    background-color: #fff;
 
-    .navigation-primary {
-        height: 80px;
+
+    &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 0 20px;
+    }
+
+    &__logo::after {
+        content: "zonifero"
+    }
+
+    .nav {
+
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+
+        &__list-item {
+            padding: 0 20px;
+            font-size: $fs-xsmall - 4;
+        }
+
+        &__list-link {
+            text-decoration: none;
+            color: #000;
+        }
+
+        &__list-arrow {
+            padding-right: 5px;
+        }
+
+        .buttons {
+            padding-left: 65px;
+
+            &__button {
+                font-family: Roboto;
+                border: none;
+                height: 80px;
+                outline: none;
+                font-size: $fs-xsmall;
+
+                &--sign-in {
+                    background-color: transparent;
+                    width: 80px;
+                }
+
+                &--sign-in:hover {
+                    cursor: pointer;
+                }
+
+                &--download {
+                    width: 280px;
+                    background-color: $product-color;
+                    color: #fff;
+                }
+
+                &--download:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__hamburger {
+        display: none;
+    }
+}
+
+@media (max-width:1023px) {
+    .navigation {
+
+        &__container {
+            height: 60px;
+        }
+
+        &__logo::after {
+            content: ""
+        }
 
         .nav {
             display: none;
         }
 
         &__hamburger {
+            display: block;
             border: none;
             background-color: transparent;
             outline: none;
-
-            &--btn {
-                font-size: $fs-regular;
-            }
-        }
-    }
-
-    .navigation-secondary {
-        &__title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &__button {
-            border: none;
-            background-color: transparent;
-            outline: none;
-        }
-
-        &__arrow {
-            padding-left: 5px;
-        }
-
-        .nav {
-            display: none;
-        }
-    }
-}
-
-@media (min-width: 950px) {
-    .header {
-        max-width: 1500px;
-        margin: 0 auto;
-
-        background-color: aliceblue;
-
-        .navigation-primary {
-
-            &__logo::after {
-                content: "zonifero";
-                font-size: 22px;
-                font-family: Poppins;
-                line-height: $lh-small;
-            }
-
-            .nav {
-                display: block;
-                font-family: Roboto;
-
-                &__list {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                &__list-item {
-                    padding: 0 20px;
-                    font-size: $fs-xsmall - 4;
-                }
-
-                &__list-link {
-                    text-decoration: none;
-                    color: #000;
-                }
-
-                &__list-arrow {
-                    padding-right: 5px;
-                }
-
-                .buttons {
-                    padding-left: 65px;
-
-                    &__button {
-                        font-family: Roboto;
-                        border: none;
-                        height: 80px;
-                        outline: none;
-                        font-size: $fs-xsmall;
-
-                        &--sign-in {
-                            background-color: transparent;
-                            margin-right: 10px;
-                        }
-
-                        &--sign-in:hover {
-                            cursor: pointer;
-                        }
-
-                        &--download {
-                            width: 280px;
-                            background-color: $product-color;
-                            color: #fff;
-                        }
-
-                        &--download:hover {
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-
-            &__hamburger {
-                display: none;
-            }
-        }
-
-        .navigation-secondary {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80px;
-            max-width: 1500px;
-            position: relative;
-
-            &__title {
-                transform: translate(0, -50%);
-                left: 0;
-                font-family: Roboto;
-                font-size: $fs-small;
-            }
-
-            &__button {
-                display: none;
-            }
-
-            .nav {
-                display: block;
-                font-family: Roboto;
-                font-size: $fs-small;
-
-                &__list {
-                    display: flex;
-                    flex-direction: row;
-                }
-
-                &__title {
-                    padding: 0 20px;
-                }
-
-                &__list-item {
-                    padding: 0 30px;
-                }
-
-                &__list-link {
-                    text-decoration: none;
-                    color: #000;
-                }
-
-                &__list-item--active {
-                    font-weight: bold;
-                }
-
-                &__list-item--active::after {
-                    content: "";
-                    display: block;
-                    width: 33px;
-                    height: 3px;
-                    background-color: $secondary-color;
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 1055px) {
-    .header {
-        .navigation-secondary {
-            &__title {
-                left: 5%;
-            }
-        }
-    }
-}
-
-@media (min-width: 1300px) {
-    .header {
-        .navigation-secondary {
-            &__title {
-                left: 15%;
-            }
         }
     }
 }

@@ -19,12 +19,12 @@
 
 //BREAKPOINTS
 
-$mobileBreakpoint: 500px;
+$tabletBreakpoint: 500px;
 $desktopBreakpoint: 1024px;
 $largeDesktopBreakpoint: 1366px;
 
-@mixin media-mobile {
-    @media (min-width : $mobileBreakpoint) {
+@mixin media-tablet {
+    @media (min-width : $tabletBreakpoint) {
         @content;
     }
 }

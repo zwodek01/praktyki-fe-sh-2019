@@ -5,36 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zonifero-Website</title>
-  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/_reset.scss">
   <link rel="stylesheet" href="styles/index.scss">
   <script src="https://kit.fontawesome.com/1c5b970057.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <section class="header__container">
-    <section class="content">
-      <h1 class="content__title">
-        Streamline your workplace
-      </h1>
-      <picture class="content__image-one">
-        <img src="/src/images/hand.png" alt="Phone" class="content__phone">
-      </picture>
-      <p class="content__text">
-        Effectively and quickly from your mobile device. Staying connected has never been easier with
-        zonifero WorkPlace.
-      </p>
-      <div class="content__buttons">
-        <button class="content__btn content__btn--android">
-        </button>
-        <button class="content__btn content__btn--ios"></button>
-      </div>
-      <picture class="content__image-two">
-        <img src="/src/images/hand.png" alt="Phone" class="content__phone">
-      </picture>
-    </section>
-  </section>
-  </header> -->
   <section class="navigation">
     <article class="primary">
       <picture class="primary__logo">
@@ -53,7 +30,7 @@
           </li>
           <li class="nav__list-item">
             <a href="#" class="nav__list-link"><img src="/src/images/globe.png" alt="Language"
-                    class="nav__list-arrow"><i class="fas fa-chevron-down"></i></a>
+                class="nav__list-arrow"><i class="fas fa-chevron-down"></i></a>
           </li>
           <div class="buttons">
             <button class="buttons__button buttons__button--sign-in">Sign in</button>
@@ -65,10 +42,6 @@
         <i class="fas fa-bars"></i>
       </button>
     </article>
-
-
-
-
     <article class="secondary">
       <nav class="nav">
         <ul class="nav__list">
@@ -99,10 +72,52 @@
       </div>
     </article>
   </section>
-  <!-- Dokończyć header -->
-  <!-- OGarnać forma i przejrzec reszte ! ! !
 
-   MEDIA @media ! ! ! -->
+
+
+  <header class="header">
+    <section class="container">
+      <div class="container__flex">
+        <h1 class="container__title">
+          Streamline your workplace
+        </h1>
+        <picture class="container__image-mobile">
+          <img src="/src/images/hand.png" alt="Phone" class="container__phone">
+        </picture>
+        <p class="container__text">
+          Effectively and quickly from your mobile device. Staying connected has never been easier with
+          zonifero WorkPlace.
+        </p>
+
+        <!-- OGARNAĆ GRAFIKI DO BUTTONÓW ! -->
+
+        <div class="container__buttons">
+          <button class="container__btn container__btn--android">ANDROID
+          </button>
+          <button class="container__btn container__btn--ios">IOS</button>
+        </div>
+      </div>
+      <div class="container__flex">
+        <picture class="container__image-desktop">
+          <img src="/src/images/hand.png" alt="Phone" class="container__phone">
+        </picture>
+      </div>
+    </section>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 
+
+
   <section class="form">
     <article class="form__container">
       <div class="contact">
@@ -121,7 +136,7 @@
       </form>
       <p class="form__text">Zonifero product family</p>
     </article>
-  </section>
+  </section> -->
 
 
 

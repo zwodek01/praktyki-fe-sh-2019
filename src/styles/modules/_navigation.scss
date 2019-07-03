@@ -14,6 +14,14 @@
         width: 100%;
         height: 80px;
 
+        @include media-desktop {
+            &__logo::after {
+                content: "zonifero";
+                font-size: $fs-small;
+                font-family: Poppins;
+            }
+        }
+
         .nav {
             display: none;
 
@@ -32,7 +40,7 @@
 
             &__list-link {
                 text-decoration: none;
-                color: #000;
+                color: $text-color;
                 transition: $transition-animation;
 
                 &:hover {
@@ -72,7 +80,7 @@
 
                     &--download:hover {
                         cursor: pointer;
-                        background-color: #2035ee;
+                        background-color: $product-color-hover;
                     }
                 }
             }
@@ -87,7 +95,7 @@
 
             &:hover {
                 cursor: pointer;
-                color: #2035ee;
+                color: $product-color-hover;
             }
 
             @include media-desktop {
@@ -99,6 +107,10 @@
     .secondary {
         @include media-desktop {
             max-width: 1300px;
+            margin-left: 120px;
+        }
+
+        @include media-large-desktop {
             margin-left: 250px;
         }
 
@@ -126,7 +138,7 @@
 
             &__list-link {
                 text-decoration: none;
-                color: #000;
+                color: $text-color;
             }
         }
 
@@ -135,12 +147,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: $fs-xsmall;
+            font-size: $fs-xsmall - 1;
             transition: $transition-animation;
 
             &:hover {
                 cursor: pointer;
-                color: #2035ee;
+                color: $product-color-hover;
             }
 
             @include media-desktop {

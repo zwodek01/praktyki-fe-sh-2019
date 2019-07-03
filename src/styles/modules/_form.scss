@@ -110,8 +110,6 @@
                 color: $product-color;
             }
 
-
-
             &__input:focus+.content__label,
             &__input:valid+.content__label {
                 transform: translateY(-50px);

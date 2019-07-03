@@ -3,16 +3,10 @@
     font-family: Roboto;
     background-color: $background-color;
     overflow: hidden;
-    // display: flex;
-    // justify-content: center;
     position: relative;
 
     @include media-desktop {
         margin: 0 20px;
-    }
-
-    @include media-large-desktop {
-        // padding-left: 250px;
     }
 
     .container {
@@ -54,11 +48,15 @@
 
 
 
-            @include media-desktop {
+            @include media-tablet {
                 max-width: 602px;
                 font-size: $fs-xlarge;
                 line-height: $lh-xlarge;
+            }
+
+            @include media-desktop {
                 padding: 0;
+
             }
         }
 

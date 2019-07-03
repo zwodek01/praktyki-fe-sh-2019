@@ -1,4 +1,8 @@
 .form {
+    @include media-desktop {
+        display: flex;
+        justify-content: center;
+    }
 
     &__container {
         margin: 120px 0 25px 0;
@@ -6,11 +10,11 @@
 
         @include media-desktop {
             max-width: 1300px;
-            margin: 160px 0 25px 120px;
+            margin: 160px 0 25px 0;
         }
 
         @include media-large-desktop {
-            margin-left: 250px;
+            // margin-left: 250px;
         }
 
         .contact {
@@ -40,6 +44,7 @@
         .content {
             display: flex;
             flex-direction: column;
+
 
             @include media-desktop {
                 flex-direction: row;

@@ -19,7 +19,7 @@
             font-family: Roboto;
             margin-bottom: 80px;
 
-            @include media-desktop {
+            @include media-tablet {
                 justify-content: center;
             }
 
@@ -95,11 +95,7 @@
             }
 
             .center {
-                margin: 0 auto 110px auto;
-
-                @include media-desktop {
-                    margin-bottom: 200px;
-                }
+                margin: 0 auto;
 
                 &__submit {
                     height: 60px;
@@ -118,10 +114,5 @@
                 }
             }
         }
-    }
-
-    &__text {
-        font-family: Roboto;
-        font-size: $fs-xsmall;
     }
 }

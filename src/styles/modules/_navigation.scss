@@ -107,11 +107,8 @@
     .secondary {
         @include media-desktop {
             max-width: 1300px;
-            margin-left: 120px;
-        }
-
-        @include media-large-desktop {
-            margin-left: 250px;
+            display: flex;
+            justify-content: center;
         }
 
         .nav {

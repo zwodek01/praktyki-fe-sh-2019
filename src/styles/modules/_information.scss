@@ -7,6 +7,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            margin: 0 20px;
         }
 
         &__card {
@@ -21,6 +22,8 @@
 
             @include media-desktop {
                 text-align: left;
+                align-items: flex-start;
+
             }
         }
 
@@ -32,8 +35,6 @@
                 display: block;
             }
         }
-
-
 
         &__title {
             font-family: Poppins;
@@ -48,30 +49,34 @@
             font-weight: 300;
             margin: 40px 0;
             line-height: $lh-xsmall+ 2;
-            width: 300px;
+            max-width: 280px;
         }
 
-        &__slider {
-            display: flex;
-            max-width: 65px;
-            justify-content: space-between;
-            margin: 0 auto;
+        .slider {
+            width: 100%;
 
-            @include media-desktop {
-                width: 100%;
+            &__container {
+                display: flex;
+                max-width: 65px;
+                justify-content: space-between;
+                margin: 0 auto;
+
+                @include media-desktop {
+                    width: 100%;
+                }
             }
-        }
 
-        &__dot {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background-color: #000;
-            display: block;
-        }
+            &__dot {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #000;
+                display: block;
+            }
 
-        &__dot--active {
-            background-color: $product-color;
+            &__dot--active {
+                background-color: $product-color;
+            }
         }
     }
 }

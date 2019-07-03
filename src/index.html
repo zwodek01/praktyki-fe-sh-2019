@@ -109,11 +109,27 @@
         <a href="#" class="contact__link">Call us</a>
       </div>
       <form class="content">
-        <input type="text" class="content__input" placeholder="First name">
-        <input type="text" class="content__input" placeholder="Family name">
-        <input type="tel" class="content__input" placeholder="Your phone">
-        <input type="email" class="content__input" placeholder="Your email">
-        <textarea class="content__message" placeholder="Message"></textarea>
+        <div class="content__group">
+          <input class="content__input" type="text" required>
+          <label class="content__label">First name <span class="content__label--star">*</span></label>
+        </div>
+        <div class="content__group">
+          <input class="content__input" type="text" required>
+          <label class="content__label">Family name<span class="content__label--star">*</span></label>
+        </div>
+        <div class="content__group">
+          <input class="content__input" type="text" required>
+          <label class="content__label">Your email<span class="content__label--star">*</span></label>
+        </div>
+        <div class="content__group">
+          <input class="content__input" type="text" required>
+          <label class="content__label">Your phone</label>
+        </div>
+        <div class="content__group content__group--message">
+          <textarea required class="content__input content__input--message"></textarea>
+          <label class="content__label content__label--message">Message<span
+              class="content__label--star">*</span></label>
+        </div>
         <div class="center">
           <input type="submit" class="center__submit" value="Send Message">
         </div>

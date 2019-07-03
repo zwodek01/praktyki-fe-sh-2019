@@ -40,7 +40,6 @@
         .content {
             display: flex;
             flex-direction: column;
-            position: relative;
 
             @include media-desktop {
                 flex-direction: row;
@@ -48,33 +47,28 @@
                 justify-content: space-between;
             }
 
-            &__input {
-                border: none;
-                height: 50px;
-                margin-bottom: 70px;
-                font-size: $fs-regular;
-                @include border-input;
-
-                &:focus {
-                    outline: none;
-                }
-
-                &::placeholder {
-                    font-size: $fs-small;
-                    color: $text-color;
-                }
+            &__group {
+                position: relative;
+                width: 100%;
 
                 @include media-desktop {
                     width: 45%;
                 }
             }
 
-            &__message {
-                resize: none;
-                height: 150px;
-                font-size: $fs-regular;
+            &__group--message {
+                @include media-desktop {
+                    width: 100%;
+                }
+            }
+
+            &__input {
                 border: none;
-                margin-bottom: 50px;
+                height: 50px;
+                width: 100%;
+                margin-bottom: 70px;
+                padding: 30px 0;
+                font-size: $fs-regular;
                 @include border-input;
 
                 &:focus {
@@ -84,14 +78,45 @@
                 &::placeholder {
                     font-size: $fs-small;
                     color: $text-color;
-                    font-family: Roboto;
                 }
 
                 @include media-desktop {
                     width: 100%;
-                    height: 50px;
+                }
+            }
+
+            &__input--message {
+                resize: none;
+                height: 200px;
+
+                @include media-desktop {
+                    width: 100%;
+                    height: 120px;
                     margin-bottom: 70px;
                 }
+            }
+
+            &__label {
+                position: absolute;
+                top: 20px;
+                left: 0;
+                transition: all 300ms;
+                font-size: $fs-regular;
+                pointer-events: none;
+                font-family: Roboto;
+            }
+
+            &__label--star {
+                color: $product-color;
+            }
+
+
+
+            &__input:focus+.content__label,
+            &__input:valid+.content__label {
+                transform: translateY(-50px);
+                font-size: $fs-xsmall;
+                opacity: .5;
             }
 
             .center {

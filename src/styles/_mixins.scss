@@ -17,6 +17,13 @@
     background-repeat: repeat-x;
 }
 
+@mixin faq-link-style {
+    display: flex;
+    flex-direction: column;
+    line-height: $lh-xsmall;
+    font-weight: bold;
+}
+
 //BREAKPOINTS
 
 $tabletBreakpoint: 500px;

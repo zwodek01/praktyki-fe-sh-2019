@@ -24,6 +24,29 @@
     font-weight: bold;
 }
 
+@mixin title-style {
+    font-size: $fs-regular + 5;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+@mixin text-style {
+    line-height: $lh-xsmall;
+    margin: 20px 0 40px 0;
+    font-weight: 300;
+}
+
+@mixin button-style {
+    height: 60px;
+    width: 200px;
+    background-color: $product-color;
+    border: none;
+    font-family: Roboto;
+    font-size: $fs-xsmall;
+    color: #fff;
+    transition: $transition-animation;
+}
+
 //BREAKPOINTS
 
 $tabletBreakpoint: 500px;

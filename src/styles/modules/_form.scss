@@ -122,14 +122,7 @@
                 margin: 0 auto;
 
                 &__submit {
-                    height: 60px;
-                    width: 200px;
-                    background-color: $product-color;
-                    border: none;
-                    font-family: Roboto;
-                    font-size: $fs-xsmall;
-                    color: #fff;
-                    transition: $transition-animation;
+                    @include button-style;
 
                     &:hover {
                         background-color: $product-color-hover;

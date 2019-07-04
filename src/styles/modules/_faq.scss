@@ -47,9 +47,7 @@
         }
 
         &__title {
-            font-size: $fs-regular + 5;
-            font-family: Poppins;
-            font-weight: bold;
+            @include title-style;
             line-height: $lh-regular;
         }
 

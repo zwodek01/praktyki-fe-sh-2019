@@ -3,24 +3,27 @@
     font-family: Roboto;
     background-color: $background-color;
     overflow: hidden;
-    position: relative;
 
     @include media-desktop {
         margin: 0 20px;
+        display: flex;
+        justify-content: center;
     }
 
     .container {
-        max-width: 1300px;
 
         @include media-desktop {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            width: 100%;
+            width: 1300px;
+            position: relative;
+            height: 700px;
+
         }
 
         @include media-large-desktop {
-            height: 700px;
+            // height: 700px;
         }
 
         &__flex {
@@ -29,6 +32,10 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+            }
+
+            @include media-desktop {
+                align-items: flex-start;
             }
         }
 
@@ -137,13 +144,14 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 40%;
             }
 
             @include media-large-desktop {
-                position: absolute;
-                top: 200px;
                 right: 0;
-                max-width: 30%;
             }
         }
     }

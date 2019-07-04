@@ -1,83 +1,90 @@
-.faq {
-    margin: 120px 20px;
-    display: flex;
-    justify-content: center;
+.main {
 
-    &__container {
-        display: flex;
-        flex-direction: column;
-
-        @include media-desktop {
-            flex-direction: row;
-            justify-content: space-between;
-            width: 1300px;
-        }
-    }
-
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        font-family: Roboto;
-        font-size: $fs-xsmall;
-        max-width: 300px;
+    .faq {
+        margin: 120px 20px;
 
         @include media-tablet {
-            align-items: flex-start;
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
 
-        @include media-desktop {
-            text-align: left;
-        }
-    }
-
-    &__wrapper--hide {
-        display: none;
-
-        @include media-desktop {
+        &__container {
             display: flex;
             flex-direction: column;
+
+            @include media-desktop {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 1300px;
+            }
         }
-    }
 
-    &__title {
-        font-size: $fs-regular + 5;
-        font-family: Poppins;
-        font-weight: bold;
-        line-height: $lh-regular;
-    }
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            font-family: Roboto;
+            font-size: $fs-xsmall;
+            max-width: 300px;
 
-    &__subtitle {
-        font-size: $fs-xsmall;
-        font-weight: bold;
-        margin-top: 60px;
-        width: 100%;
+            @include media-tablet {
+                align-items: flex-start;
+                text-align: center;
+            }
 
-        @include media-desktop {
-            margin-top: 0;
+            @include media-desktop {
+                text-align: left;
+                width: 300px;
+            }
         }
-    }
 
-    &__text {
-        line-height: $lh-xsmall;
-        margin: 20px 0 40px 0;
-        font-weight: 300;
-    }
+        &__wrapper--hide {
+            display: none;
 
-    &__text--stress {
-        text-decoration: underline;
-    }
+            @include media-desktop {
+                display: flex;
+                flex-direction: column;
+            }
+        }
 
-    &__questions {
-        @include faq-link-style;
-    }
+        &__title {
+            font-size: $fs-regular + 5;
+            font-family: Poppins;
+            font-weight: bold;
+            line-height: $lh-regular;
+        }
 
-    &__question-link {
-        text-decoration: none;
-        color: $text-color;
-    }
+        &__subtitle {
+            font-size: $fs-xsmall;
+            font-weight: bold;
+            margin-top: 60px;
+            width: 100%;
 
-    &__question-link {
-        @include faq-link-style;
+            @include media-desktop {
+                margin-top: 0;
+            }
+        }
+
+        &__text {
+            line-height: $lh-xsmall;
+            margin: 20px 0 40px 0;
+            font-weight: 300;
+        }
+
+        &__text--stress {
+            text-decoration: underline;
+        }
+
+        &__questions {
+            @include faq-link-style;
+        }
+
+        &__question-link {
+            text-decoration: none;
+            color: $text-color;
+        }
+
+        &__question-link {
+            @include faq-link-style;
+        }
     }
 }

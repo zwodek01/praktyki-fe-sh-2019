@@ -1,80 +1,87 @@
 .main {
     .information {
         background-color: $background-color;
-        padding: 80px 0;
+        font-family: Roboto;
 
         @include media-desktop {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            margin: 0 20px;
+            padding: 60px 0;
         }
 
-        &__card {
+        &__container {
             margin: 0 20px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
 
             @include media-tablet {
-                display: flex;
                 align-items: center;
-                flex-direction: column;
-                text-align: center;
             }
 
             @include media-desktop {
-                text-align: left;
-                align-items: flex-start;
-
+                flex-direction: row;
+                justify-content: space-between;
+                width: 1300px;
             }
         }
 
-        &__card:nth-of-type(2),
-        &__card:nth-of-type(3) {
+        &__wrapper {
+
+            @include media-tablet {
+                max-width: 300px;
+            }
+
+            @include media-desktop {
+                height: 100%;
+            }
+        }
+
+        &__wrapper:nth-of-type(2),
+        &__wrapper:nth-of-type(3) {
             display: none;
 
             @include media-desktop {
                 display: block;
+
             }
         }
 
         &__title {
             font-family: Poppins;
-            font-size: $fs-regular;
+            font-size: $fs-regular - 5;
             font-weight: bold;
             line-height: $lh-regular;
         }
 
         &__text {
-            font-family: Roboto;
             font-size: $fs-xsmall;
             font-weight: 300;
-            margin: 40px 0;
-            line-height: $lh-xsmall+ 2;
-            max-width: 280px;
+            line-height: $lh-xsmall;
+            margin: 40px 0 0;
         }
 
+
         .slider {
+            display: flex;
+            justify-content: center;
 
             @include media-desktop {
                 display: none;
             }
 
             &__container {
+                width: 65px;
                 display: flex;
-                max-width: 65px;
                 justify-content: space-between;
-                margin: 0 auto;
             }
 
             &__dot {
                 width: 5px;
                 height: 5px;
+                background-color: $text-color;
+                display: inline-block;
                 border-radius: 50%;
-                background-color: #000;
-                display: block;
-            }
-
-            &__dot--active {
-                background-color: $product-color;
             }
         }
     }

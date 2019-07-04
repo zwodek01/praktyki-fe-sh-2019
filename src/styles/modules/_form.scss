@@ -13,10 +13,6 @@
             margin: 160px 0 25px 0;
         }
 
-        @include media-large-desktop {
-            // margin-left: 250px;
-        }
-
         .contact {
             display: flex;
             justify-content: flex-start;

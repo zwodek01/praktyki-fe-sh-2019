@@ -103,37 +103,37 @@
         }
     }
 
-    //  TODO:   ogarnać rozmieszczenie grafik
-    // TODO: Dokończyć section shop
-    // TODO: mobile: form font-fize, FAQ do góry, 
-    // TODO: dektop: poprawic rozmieszczenie grafik w shop section, dodać margin w form section, buttony do lewej
-
-
     &__image-printer {
         position: absolute;
-        bottom: 0;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 3;
-
-        @include media-desktop {}
-
-        @include media-large-desktop {}
     }
 
     &__image-tablet {
         position: absolute;
-        bottom: 0;
+        top: 40%;
+        transform: translateY(-50%);
         z-index: 2;
 
-        @include media-large-desktop {
+        @include media-desktop {
+            left: 70px;
+        }
 
+        @include media-large-desktop {
             left: 150px;
         }
     }
 
     &__image-handle {
         position: absolute;
-        bottom: 0;
+        top: 54%;
+        transform: translateY(-50%);
         z-index: 1;
+
+        @include media-desktop {
+            left: 300px;
+        }
 
         @include media-large-desktop {
             left: 400px;

@@ -2,6 +2,7 @@
     @include media-desktop {
         display: flex;
         justify-content: center;
+        margin: 0 20px;
     }
 
     &__container {
@@ -77,11 +78,6 @@
                     outline: none;
                 }
 
-                &::placeholder {
-                    font-size: $fs-small;
-                    color: $text-color;
-                }
-
                 @include media-desktop {
                     width: 100%;
                 }
@@ -89,21 +85,18 @@
 
             &__input--message {
                 resize: none;
-                height: 200px;
 
                 @include media-desktop {
-                    width: 100%;
-                    height: 120px;
-                    margin-bottom: 70px;
+                    height: 100px;
                 }
             }
 
             &__label {
                 position: absolute;
-                top: 20px;
+                top: 30px;
                 left: 0;
                 transition: all 300ms;
-                font-size: $fs-regular;
+                font-size: $fs-small;
                 pointer-events: none;
                 font-family: Roboto;
             }

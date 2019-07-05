@@ -2,7 +2,6 @@
     padding: 160px 0 0;
     font-family: Roboto;
     background-color: $background-color;
-    overflow: hidden;
 
     @include media-desktop {
         margin: 0 20px;
@@ -19,11 +18,6 @@
             width: 1300px;
             position: relative;
             height: 700px;
-
-        }
-
-        @include media-large-desktop {
-            // height: 700px;
         }
 
         &__flex {
@@ -40,37 +34,38 @@
         }
 
         &__title {
-            max-width: 370px;
+
             color: $product-color;
             font-family: Poppins;
             font-size: $fs-large;
             font-weight: bold;
-            line-height: $lh-large;
             padding: 0 20px;
-
-
+            max-width: 370px;
 
             @include media-tablet {
-                max-width: 602px;
+                max-width: 610px;
                 font-size: $fs-xlarge;
                 line-height: $lh-xlarge;
             }
 
             @include media-desktop {
                 padding: 0;
-
+                max-width: 570px;
             }
         }
 
         &__image-mobile {
             display: block;
-            overflow: hidden;
             background: url("/src/images/desks.png");
             background-position: center;
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: 120%;
             padding: 0 20px;
             position: relative;
+
+            @include media-tablet {
+                background-size: contain;
+            }
 
             @include media-desktop {
                 display: none;
@@ -78,14 +73,13 @@
         }
 
         &__phone {
-            display: block;
             margin: 50px auto 0;
             width: 100%;
         }
 
         &__text {
             color: $text-color;
-            font-size: $fs-small + 3;
+            font-size: $fs-small;
             line-height: $lh-small;
             padding: 0 20px;
             margin: 40px 0;
@@ -93,26 +87,24 @@
             @include media-tablet {
                 max-width: 320px;
                 text-align: center;
+                font-size: $fs-regular;
+                line-height: $lh-regular;
+                max-width: 600px;
             }
 
             @include media-desktop {
-                font-size: $fs-regular;
-                line-height: $lh-regular;
                 padding: 0;
-                max-width: 600px;
                 text-align: left;
             }
         }
 
         &__buttons {
-            margin: 0 auto;
-            padding: 0 20px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
+            padding: 0 20px;
             max-width: 420px;
 
             @include media-desktop {
-                margin: 0;
                 padding: 0;
             }
         }
@@ -121,7 +113,7 @@
             height: 50px;
             width: 130px;
 
-            @include media-desktop {
+            @include media-tablet {
                 width: 180px;
                 height: 70px;
             }
@@ -148,10 +140,6 @@
                 top: 0;
                 right: 0;
                 width: 40%;
-            }
-
-            @include media-large-desktop {
-                right: 0;
             }
         }
     }

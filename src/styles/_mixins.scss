@@ -25,7 +25,7 @@
 }
 
 @mixin title-style {
-    font-size: $fs-regular + 5;
+    font-size: $fs-regular;
     font-family: Poppins;
     font-weight: bold;
 }
@@ -46,12 +46,6 @@
     color: #fff;
     transition: $transition-animation;
 }
-
-//BREAKPOINTS
-
-$tabletBreakpoint: 500px;
-$desktopBreakpoint: 1024px;
-$largeDesktopBreakpoint: 1366px;
 
 @mixin media-tablet {
     @media (min-width : $tabletBreakpoint) {

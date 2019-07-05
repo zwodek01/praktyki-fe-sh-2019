@@ -2,7 +2,7 @@
     .information {
         background-color: $background-color;
         font-family: Roboto;
-        padding: 60px 0;
+        padding: 100px 0;
 
         @include media-desktop {
             display: flex;
@@ -13,7 +13,6 @@
         &__container {
             margin: 0 20px;
             display: flex;
-            justify-content: flex-start;
             flex-direction: column;
 
             @include media-tablet {
@@ -47,13 +46,12 @@
 
             @include media-desktop {
                 display: block;
-
             }
         }
 
         &__title {
             font-family: Poppins;
-            font-size: $fs-regular - 5;
+            font-size: $fs-regular;
             font-weight: bold;
             line-height: $lh-regular;
         }
@@ -64,7 +62,6 @@
             line-height: $lh-xsmall;
             margin: 40px 0 0;
         }
-
 
         .slider {
             display: flex;
@@ -85,8 +82,11 @@
                 width: 5px;
                 height: 5px;
                 background-color: $text-color;
-                display: inline-block;
                 border-radius: 50%;
+
+                &--active {
+                    background-color: $product-color;
+                }
             }
         }
     }

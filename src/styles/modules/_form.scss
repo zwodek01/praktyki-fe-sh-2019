@@ -83,19 +83,16 @@
                 }
             }
 
-            &__input--message {
+            &__input--no-resize {
                 resize: none;
-
-                @include media-desktop {
-                    height: 100px;
-                }
+                height: 100px;
             }
 
             &__label {
                 position: absolute;
                 top: 30px;
                 left: 0;
-                transition: all 300ms;
+                transition: all .3s;
                 font-size: $fs-small;
                 pointer-events: none;
                 font-family: Roboto;
@@ -105,15 +102,24 @@
                 color: $product-color;
             }
 
+            &__label--position {
+                top: 70px;
+            }
+
             &__input:focus+.content__label,
             &__input:valid+.content__label {
-                transform: translateY(-50px);
+                transform: translateY(-70px);
                 font-size: $fs-xsmall;
                 opacity: .5;
             }
 
             .center {
-                margin: 0 auto;
+                display: flex;
+                justify-content: flex-start;
+
+                @include media-tablet {
+                    margin: 0 auto;
+                }
 
                 &__submit {
                     @include button-style;

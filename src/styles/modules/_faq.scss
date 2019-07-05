@@ -1,5 +1,4 @@
 .main {
-
     .faq {
         margin: 60px 20px;
 
@@ -13,10 +12,9 @@
         }
 
         &__container {
-            display: flex;
-            flex-direction: column;
 
             @include media-desktop {
+                display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 width: 1300px;
@@ -24,20 +22,16 @@
         }
 
         &__wrapper {
-            display: flex;
-            flex-direction: column;
             font-family: Roboto;
             font-size: $fs-xsmall;
             max-width: 300px;
 
             @include media-tablet {
-                align-items: flex-start;
                 text-align: center;
             }
 
             @include media-desktop {
                 text-align: left;
-                width: 300px;
             }
         }
 
@@ -59,7 +53,6 @@
             font-size: $fs-xsmall;
             font-weight: bold;
             margin-top: 60px;
-            width: 100%;
 
             @include media-desktop {
                 margin-top: 0;

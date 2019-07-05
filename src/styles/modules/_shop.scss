@@ -17,7 +17,6 @@
 
             @include media-tablet {
                 justify-content: center;
-
             }
 
             @include media-desktop {
@@ -27,8 +26,9 @@
         }
 
         &__content {
-            width: 300px;
-
+            @include media-tablet {
+                overflow: hidden;
+            }
 
             @include media-desktop {
                 display: flex;
@@ -39,8 +39,6 @@
         }
 
         &__description {
-            display: flex;
-            flex-direction: column;
 
             @include media-tablet {
                 width: 300px;
@@ -54,7 +52,7 @@
 
         &__title {
             @include title-style;
-            line-height: $lh-regular + 5;
+            line-height: $lh-regular;
 
             @include media-tablet {
                 text-align: center;
@@ -87,11 +85,18 @@
             @include button-style;
             margin: 40px 0;
 
+            @include media-tablet {
+                width: 100%;
+            }
+
+            @include media-desktop {
+                width: 200px;
+            }
+
             &:hover {
                 background-color: $product-color-hover;
                 cursor: pointer;
             }
-
         }
 
         &__content-desktop {

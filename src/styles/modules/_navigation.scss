@@ -18,7 +18,6 @@
             &__logo::after {
                 content: "zonifero";
                 font-size: $fs-small;
-                font-family: Poppins;
             }
         }
 
@@ -65,10 +64,10 @@
                     &--sign-in {
                         background-color: transparent;
                         width: 80px;
-                    }
 
-                    &--sign-in:hover {
-                        cursor: pointer;
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
 
                     &--download {
@@ -76,37 +75,36 @@
                         background-color: $product-color;
                         color: #fff;
                         transition: $transition-animation;
-                    }
 
-                    &--download:hover {
-                        cursor: pointer;
-                        background-color: $product-color-hover;
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $product-color-hover;
+                        }
                     }
                 }
             }
         }
 
         &__hamburger {
-            display: block;
             border: none;
             background-color: transparent;
             outline: none;
             transition: $transition-animation;
 
+            @include media-desktop {
+                display: none;
+            }
+
             &:hover {
                 cursor: pointer;
                 color: $product-color-hover;
-            }
-
-            @include media-desktop {
-                display: none;
             }
         }
     }
 
     .secondary {
         @include media-desktop {
-            max-width: 1300px;
+            width: 1300px;
             margin: 0 auto;
         }
 
@@ -126,10 +124,10 @@
 
             &__list-item {
                 margin-right: 40px;
-            }
 
-            &__list-item--active {
-                @include active;
+                &--active {
+                    @include active;
+                }
             }
 
             &__list-link {
@@ -143,7 +141,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: $fs-xsmall - 1;
+            font-size: $fs-xsmall;
             transition: $transition-animation;
 
             &:hover {
